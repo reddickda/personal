@@ -1,13 +1,13 @@
 import { useFrame } from "@react-three/fiber"
-import { RigidBody } from "@react-three/rapier"
+import { RigidBody, RapierRigidBody } from "@react-three/rapier"
 import { useRef } from "react"
-import * as THREE from "three"
+import { Quaternion, Euler } from "three"
 
 export const Paddle = () => {
-  const ref = useRef()
+  const ref = useRef<RapierRigidBody>(null!)
   useFrame(({ pointer, viewport }) => {
-    ref.current.setTranslation({ x: (pointer.x * viewport.width) / 2, y: -viewport.height / 3, z: 0 })
-    ref.current.setRotation(new THREE.Quaternion().setFromEuler(new THREE.Euler().set(0, 0, (pointer.x * Math.PI) / 10)))
+    ref.current.setTranslation({ x: (pointer.x * viewport.width) / 2, y: -viewport.height / 3, z: 0 }, true)
+    ref.current.setRotation(new Quaternion().setFromEuler(new Euler().set(0, 0, (pointer.x * Math.PI) / 10)), true)
   });
 
   return (

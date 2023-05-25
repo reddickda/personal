@@ -1,11 +1,11 @@
 import { useThree } from "@react-three/fiber"
-import { RigidBody, CuboidCollider } from "@react-three/rapier"
+import { RigidBody, CuboidCollider, RapierRigidBody } from "@react-three/rapier"
 import { useRef } from "react"
 
 export const Ball = () => {
-  const ref = useRef()
+  const ref = useRef<RapierRigidBody>(null!)
   const { viewport } = useThree()
-  const onCollisionEnter = () => (ref.current.setTranslation({ x: 0, y: 0, z: 0 }), ref.current.setLinvel({ x: 0, y: 10, z: 0 }))
+  const onCollisionEnter = () => (ref.current.setTranslation({ x: 0, y: 0, z: 0 }, true), ref.current.setLinvel({ x: 0, y: 10, z: 0 }, true))
   return (
     <>
       <RigidBody ref={ref} colliders="ball" mass={1}>

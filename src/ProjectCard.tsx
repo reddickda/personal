@@ -1,4 +1,4 @@
-import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
+import { Card, Image, Text, Button } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
 
 export interface ProjectCardProps {

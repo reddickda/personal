@@ -1,16 +1,16 @@
 import { useFrame } from "@react-three/fiber";
 import { useRef, useEffect } from "react";
-import * as THREE from "three"
+import { BoxGeometry, MeshBasicMaterial, Group, Mesh, Vector3 } from "three"
 
-export const Explosion = ({ color, position }) => {
-  const groupRef = useRef();
-  const blocks = useRef([]);
+export const Explosion = ({ color, position }: { color: string, position: number[] }) => {
+  const groupRef = useRef<Group>(null!);
+  const blocks = useRef<any[]>([]);
 
   // Function to create a child block with a random position and rotation
   const createBlock = () => {
-    const block = new THREE.Mesh(
-      new THREE.BoxGeometry(.5, .5, .5),
-      new THREE.MeshBasicMaterial({ color })
+    const block = new Mesh(
+      new BoxGeometry(.5, .5, .5),
+      new MeshBasicMaterial({ color })
     );
     block.position.x = Math.random() * 2 - 1;
     block.position.y = Math.random() * 2 - 1;
@@ -23,8 +23,8 @@ export const Explosion = ({ color, position }) => {
   };
 
   const explode = () => {
-    blocks.current.forEach((block) => {
-      const velocity = new THREE.Vector3(
+    blocks.current.forEach((block : any) => {
+      const velocity = new Vector3(
         Math.random() * 2 - 1,
         Math.random() * 2 - 1,
         Math.random() * 2 - 1
@@ -57,7 +57,7 @@ export const Explosion = ({ color, position }) => {
   }, []);
 
   return (
-      <group ref={groupRef} position={position}>
+      <group ref={groupRef} position={new Vector3(position[0], position[1], position[2])}>
       </group>
   )
 }
