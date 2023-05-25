@@ -71,13 +71,13 @@ function App() {
       <Stack>
         <Title ref={projectsRef}>Projects</Title>
         <Grid>
-          <Grid.Col span={5}>
+          <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "https://reddickda.github.io/where-are-you-tall/", source: wayt, description: "Find out where in the world you are tall", cta: "Check out the project" }} />
           </Grid.Col>
-          <Grid.Col span={5}>
+          <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "https://reddickda.github.io/timezoneTracker/", source: timezone, description: "Find out what timezone you are in", cta: "Check out the project" }} />
           </Grid.Col>
-          <Grid.Col span={5}>
+          <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "", source: friendMap, description: "Follow your friends across the globe!", cta: undefined }} />
           </Grid.Col>
         </Grid>

@@ -8,11 +8,11 @@ import { createStyles } from '@mantine/core'
 const useStyles = createStyles((theme) => ({
   canvas: {
     [theme.fn.smallerThan('sm')]: {
-      width: 300,
+      width: '100%',
       height: 300,
     },
     height: 500,
-    width: 800
+    width: '100%'
   }
 }));
 
