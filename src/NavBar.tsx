@@ -32,15 +32,22 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface NavBarProps {
-  tabs: string[];
+  tabs: { name: string; ref: React.MutableRefObject<null>; }[];
 }
 
 export function NavBar({ tabs }: NavBarProps) {
   const { classes} = useStyles();
 
+  const scrollToSection = (ref:any) => {
+    ref.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
   const items = tabs.map((tab) => (
-    <Tabs.Tab value={tab} key={tab}>
-      {tab}
+    <Tabs.Tab value={tab.name} key={tab.name} onClick={() => scrollToSection(tab.ref)}>
+      {tab.name}
     </Tabs.Tab>
   ));
 
