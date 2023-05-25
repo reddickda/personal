@@ -1,12 +1,15 @@
 import { Center, Flex, Grid, Stack, Title, createStyles, keyframes } from '@mantine/core';
 import './App.css'
-import { ThreeCanvas } from './ThreeCanvas';
 import { NavBar } from './NavBar';
 import { useRef } from 'react';
 import { ProjectCard } from './ProjectCard';
 import wayt from './assets/wayt.png';
 import timezone from './assets/timezone.png';
 import friendMap from './assets/friendmap.png';
+import robotGame from './assets/robotgame.png';
+import { lazy } from 'react';
+
+const ThreeCanvasPreview = lazy(() => import('./ThreeCanvas.tsx'));
 
 const dropDownAnimation = keyframes({
   '0%': { transform: 'translateY(-300px)' },
@@ -57,7 +60,7 @@ function App() {
   const projectsRef = useRef(null);
   return (
     <>
-      <ThreeCanvas />
+      <ThreeCanvasPreview />
       <Center>
         <Stack className={classes.stack}>
           <Flex>
@@ -66,16 +69,19 @@ function App() {
           <Title className={classes.text}>I am a full-stack developer</Title>
         </Stack>
       </Center>
-      <NavBar tabs={[{ name: 'Projects', ref: projectsRef }, { name: 'Experience', ref: experienceRef }]} />
+      <NavBar tabs={[{ name: 'Personal Projects', ref: projectsRef }, { name: 'Experience', ref: experienceRef }]} />
       <Flex sx={{ height: 500 }}></Flex>
       <Stack>
-        <Title ref={projectsRef}>Projects</Title>
-        <Grid>
+        <Title ref={projectsRef}>Personal Projects</Title>
+        <Grid sx={{ justifyContent:'center' }}>
           <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "https://reddickda.github.io/where-are-you-tall/", source: wayt, description: "Find out where in the world you are tall", cta: "Check out the project" }} />
           </Grid.Col>
           <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "https://reddickda.github.io/timezoneTracker/", source: timezone, description: "Find out what timezone you are in", cta: "Check out the project" }} />
+          </Grid.Col>
+          <Grid.Col sm={6} md={5}>
+            <ProjectCard project={{ link: "https://davidrportfolio.netlify.app/", source: robotGame, description: "My 2019 Portfolio V1", cta: "Play around with some stuff" }} />
           </Grid.Col>
           <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "", source: friendMap, description: "Follow your friends across the globe!", cta: undefined }} />
@@ -89,6 +95,11 @@ function App() {
           <h3>Sirrus7</h3>
           <p>
             Built and maintained high traffic, event-driven, C# .Net cloud hosted applications at scale for Starbucks. Created and maintained the CI/CD pipelines in devops.
+          </p>
+          <h3>Cicadda inc.</h3>
+          <p>
+            Co-founder, senior software engineer, Developing TypeScript and React application utilizing Firebase as a backend, enabling teachers to
+            incorporate Generative AI technology for peer-review of in-class assignments
           </p>
           <h3>Quest Mindshare LLC</h3>
           <p>

@@ -16,7 +16,7 @@ const useStyles = createStyles((theme) => ({
   }
 }));
 
-export const ThreeCanvas = () => {
+export default function ThreeCanvas() {
   const { classes } = useStyles();
   return (
     <div className={classes.canvas} id="canvas-container">
