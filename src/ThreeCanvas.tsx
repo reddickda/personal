@@ -12,7 +12,8 @@ const useStyles = createStyles((theme) => ({
       height: 300,
     },
     height: 500,
-    width: '100%'
+    width: '100%',
+    paddingTop: 100,
   }
 }));
 

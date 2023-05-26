@@ -7,7 +7,8 @@ import {
 
 const useStyles = createStyles((theme) => ({
   header: {
-    paddingTop: 100
+    paddingTop: 100,
+    paddingBottom: 300,
   },
 
   tabs: {
