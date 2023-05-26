@@ -1,4 +1,4 @@
-import { ActionIcon, Center, Flex, Grid, Group, Stack, Title, createStyles, keyframes } from '@mantine/core';
+import { ActionIcon, Center, Flex, Grid, Stack, Title, createStyles, keyframes } from '@mantine/core';
 import { IconBrandLinkedin } from '@tabler/icons-react';
 import { useRef, lazy } from 'react';
 import './App.css'
