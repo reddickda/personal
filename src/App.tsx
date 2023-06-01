@@ -78,7 +78,7 @@ function App() {
         <Title ref={projectsRef}>Personal Projects</Title>
         <Grid sx={{ justifyContent:'center' }}>
           <Grid.Col sm={6} md={5}>
-            <ProjectCard project={{ link: "https://reddickda.github.io/where-are-you-tall/", source: wayt, description: "Find out where in the world you are tall", cta: "Check out the project" }} />
+            <ProjectCard project={{ link: "https://whereareyoutall.com/", source: wayt, description: "Find out where in the world you are tall", cta: "Check out the project" }} />
           </Grid.Col>
           <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "https://reddickda.github.io/timezoneTracker/", source: timezone, description: "Find out what timezone you are in", cta: "Check out the project" }} />
