@@ -87,7 +87,7 @@ function App() {
             <ProjectCard project={{ link: "https://davidrportfolio.netlify.app/", source: robotGame, description: "My 2019 Portfolio V1", cta: "Play around with some stuff" }} />
           </Grid.Col>
           <Grid.Col sm={6} md={5}>
-            <ProjectCard project={{ link: "", source: friendMap, description: "Follow your friends across the globe!", cta: undefined }} />
+            <ProjectCard project={{ link: "https://main.d243sszublig3p.amplifyapp.com/", source: friendMap, description: "Follow your friends across the globe!", cta: "Social Media Application in alpha" }} />
           </Grid.Col>
         </Grid>
       </Stack>
@@ -101,7 +101,8 @@ function App() {
           <h3>Cicadda inc. | April 2023 - present</h3>
           <p>
             Co-founder, senior software engineer, Developing TypeScript and React application utilizing Firebase as a backend, enabling teachers to
-            incorporate Generative AI technology for peer-review of in-class assignments
+            incorporate Generative AI technology for peer-review of in-class assignments.
+            Creating a suite a line-of-business tools leveraging Generative AI to assist in multiple industries.
           </p>
           <h3>Quest Mindshare LLC | November 2021-September 2022</h3>
           <p>
