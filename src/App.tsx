@@ -75,9 +75,9 @@ function App() {
           <Title className={classes.text}>I am a full-stack developer</Title>
         </Stack>
       </Center>
-      <NavBar tabs={[{ name: 'Personal Projects', ref: projectsRef }, { name: 'Experience', ref: experienceRef }, { name: 'Contact', ref: contactMeRef }]} />
+      <NavBar tabs={[{ name: 'My Work', ref: projectsRef }, { name: 'Contact', ref: contactMeRef }]} />
       <Stack pb={300}>
-        <Title ref={projectsRef}>Personal Projects</Title>
+        <Title ref={projectsRef}>My Work</Title>
         <Grid sx={{ justifyContent:'center' }}>
         <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "https://columbiafc.club/", source: cfc, description: "My local amatuer soccer team's site", cta: "Check out the project" }} />
@@ -99,7 +99,7 @@ function App() {
           </Grid.Col>
         </Grid>
       </Stack>
-      <Stack pb={300}>
+      {/* <Stack pb={300}>
         <Title ref={experienceRef}>Experience</Title>
         <Stack>
           <h3>Sirrus7 September | 2022 - present</h3>
@@ -131,9 +131,9 @@ function App() {
             Designed and developed 2D games for a mobile application suite using Unity, C#, and SQL
           </p>
         </Stack>
-      </Stack>
+      </Stack> */}
       <Stack pb={20}>
-      <Title ref={contactMeRef}>Contact</Title>
+      <Title ref={contactMeRef}>Want a site like any of these? Lets talk!</Title>
       <Center>
         reddickdav@gmail.com
           <ActionIcon onClick={() => window.location.href='https://www.linkedin.com/in/david-reddick-80a699104/'} size="lg">
