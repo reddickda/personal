@@ -8,6 +8,8 @@ import wayt from './assets/wayt.png';
 import timezone from './assets/timezone.png';
 import friendMap from './assets/friendmap.png';
 import robotGame from './assets/robotgame.png';
+import rushHour from './assets/rushhour.jpg';
+import cfc from './assets/cfc.jpg';
 
 const ThreeCanvasPreview = lazy(() => import('./ThreeCanvas.tsx'));
 
@@ -77,8 +79,14 @@ function App() {
       <Stack pb={300}>
         <Title ref={projectsRef}>Personal Projects</Title>
         <Grid sx={{ justifyContent:'center' }}>
+        <Grid.Col sm={6} md={5}>
+            <ProjectCard project={{ link: "https://columbiafc.club/", source: cfc, description: "My local amatuer soccer team's site", cta: "Check out the project" }} />
+          </Grid.Col>
           <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "https://whereareyoutall.com/", source: wayt, description: "Find out where in the world you are tall", cta: "Check out the project" }} />
+          </Grid.Col>
+          <Grid.Col sm={6} md={5}>
+            <ProjectCard project={{ link: "https://reddickda.github.io/rushHour", source: rushHour, description: "Configure and solve Rush Hour Traffic using a BFS approach.", cta: "Check out the project" }} />
           </Grid.Col>
           <Grid.Col sm={6} md={5}>
             <ProjectCard project={{ link: "https://reddickda.github.io/timezoneTracker/", source: timezone, description: "Find out what timezone you are in", cta: "Check out the project" }} />
