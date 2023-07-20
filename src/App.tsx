@@ -60,7 +60,6 @@ const useStyles = createStyles((theme) => ({
 
 function App() {
   const { classes } = useStyles();
-  const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const contactMeRef = useRef(null);
 
